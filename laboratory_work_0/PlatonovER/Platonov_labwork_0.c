@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int main() {
+int main(void) {
     printf("\n1 круг r1, x1, y1\n");
     int r1, x1, y1;
     scanf("%i %i %i", &r1, &x1, &y1);
@@ -24,20 +24,25 @@ int main() {
         r_min = r1;
     }
 
-    double d = sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1));
+    int dx = x2 - x1;
+    int dy = y2 - y1;
+    int d = dx * dx + dy * dy;
+
+    int summa = r1 + r2;
+    int razn = r_max - r_min;
    
 
     if (r1 == r2 && x1 == x2 && y1 == y2) {
         printf("\nсовпадение\n");
-    } else if (r_max - r_min == d) {
+    } else if (razn * razn == d) {
         printf("\nодно внутреннее касание\n");
-    } else if (r_max > d + r_min) {
+    } else if (razn * razn > d) {
         printf("\nодна внутри другой без касаний\n");
-    } else if (d == r1 + r2) {
+    } else if (d == summa * summa) {
         printf("\nодно внешнее касание\n");
-    } else if (d > r1 + r2) {
+    } else if (d > summa * summa) {
         printf("\nнет касаний\n");
-    } else if (d < r1 + r2) {
+    } else {
         printf("\nдва касания\n");
     }
     return 0;
