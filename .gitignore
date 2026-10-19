@@ -427,3 +427,11 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+# Служебные файлы macOS
+.DS_Store
+
+# Результаты компиляции C
+*.o
+*.out
+*.exe
+*.dSYM/
