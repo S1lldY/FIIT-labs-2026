@@ -11,12 +11,12 @@ int main(void) {
         printf("\nошибка ввода\n");
         return 1;
     }
-    float Vs = h * w * (5 / 10.0);
-    float Vb = (h * d * (15 / 10.0)) * 2;
-    float Vk = (w * d * (15 / 10.0)) * 2;
-    float Vd = h * w * 1;
-    int polki = (h - 1) / (40 + 1.5);
-    float Vp = ((w - 3.0) * d * (15 / 10.0)) * polki;
+    float Vs = h * w * (5.0 / 10.0);
+    float Vb = (h * d * (15.0 / 10.0)) * 2.0;
+    float Vk = (w * d * (15.0 / 10.0)) * 2.0;
+    float Vd = h * w * 1.0;
+    int polki = (h - 1.0) / (40.0 + 1.5);
+    float Vp = ((w - 3.0) * d * (15.0 / 10.0)) * polki;
     float plotnostd = 1.5;
     float plotnostDSP = 0.8;
     float plotnostDVP = 0.6;
